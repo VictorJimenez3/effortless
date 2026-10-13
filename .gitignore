@@ -7,3 +7,7 @@ node_modules/
 report-worker/.dev.vars
 report-worker/.wrangler/
 .jev-runs/
+
+# Codex Python adapter
+__pycache__/
+*.pyc

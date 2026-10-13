@@ -1,6 +1,6 @@
-> **Codex adaptation — experimental**
+> **Codex desktop adaptation — experimental**
 >
-> This fork explores bringing Effortless-style model and reasoning routing to Codex. The [Codex evaluation report](docs/codex/evaluation-report.md) documents 283 live model calls, observed failures, and a tested initial routing policy. Automatic Codex routing is not implemented or installed yet, and cost savings have not been established. The original Claude Code project by [HeyCubit](https://github.com/HeyCubit/effortless) remains credited below.
+> This fork includes a [local Codex desktop adapter](codex-port/README.md) that changes actual reasoning effort. The [matched comparison](docs/codex/matched-comparison.md) selected **Sol-low as the judge** under identical stricter rules. The [initial evaluation](docs/codex/evaluation-report.md) preserves the earlier findings and limitations. Cost savings have not been established. The original Claude Code project by [HeyCubit](https://github.com/HeyCubit/effortless) remains credited below.
 
 <p align="center">
   <img src="docs/readme/banner.png" alt="effortless, a Claude Code mod: one bar above the prompt that picks the reasoning effort for every prompt" width="100%">

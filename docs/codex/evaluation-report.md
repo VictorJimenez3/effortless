@@ -1,3 +1,5 @@
+> Update: the later [matched stricter-rules comparison](matched-comparison.md) selected **Sol-low** as the judge (102/102 accepted choices versus Luna-low’s 101/102). The earlier Luna recommendation below was preliminary; its 16/16 test used a different, smaller set and did not establish superiority.
+
 # Effortless for Codex: routing experiment
 Victor Jimenez — October 13, 2026
 

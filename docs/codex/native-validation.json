@@ -1,0 +1,54 @@
+[
+  {
+    "probe": "actual_routing_with_collaboration_mode",
+    "pass": true,
+    "settings": {
+      "model": "gpt-6.1-sol",
+      "effort": "low",
+      "approvalPolicy": "never",
+      "sandbox": {
+        "type": "readOnly",
+        "networkAccess": false
+      }
+    }
+  },
+  {
+    "probe": "confirmation_keeps_active_effort",
+    "pass": true,
+    "settings": {
+      "model": "gpt-6.1-sol",
+      "effort": "low",
+      "approvalPolicy": "never",
+      "sandbox": {
+        "type": "readOnly",
+        "networkAccess": false
+      }
+    }
+  },
+  {
+    "probe": "manual_picker_wins",
+    "pass": true,
+    "settings": {
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "approvalPolicy": "never",
+      "sandbox": {
+        "type": "readOnly",
+        "networkAccess": false
+      }
+    }
+  },
+  {
+    "probe": "forced_judge_timeout_preserves_original",
+    "pass": true,
+    "settings": {
+      "model": "gpt-6.1-sol",
+      "effort": "high",
+      "approvalPolicy": "never",
+      "sandbox": {
+        "type": "readOnly",
+        "networkAccess": false
+      }
+    }
+  }
+]

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Effortless Codex"
+  short_description: "Manage the local Codex automatic effort adapter"
+  default_prompt: "Use $effortless-codex to inspect or change my routing settings."
+policy:
+  allow_implicit_invocation: false
