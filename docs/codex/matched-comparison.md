@@ -1,3 +1,5 @@
+> Current setup: the later [total-usage evaluation](total-usage.md) changed the default to guarded Luna-low as judge with Sol as worker and a warm-cache bypass. Historical results below remain unchanged.
+
 # Matched stricter-rules judge comparison
 
 October 13, 2026. This replaces the preliminary Luna-low judge recommendation in the earlier report.

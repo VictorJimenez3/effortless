@@ -72,4 +72,60 @@ class PolicyTests(unittest.TestCase):
         self.assertTrue(is_followup('Thanks!'))
         self.assertFalse(is_followup('Yes, but change the algorithm.'))
 
+class RiskFloorTests(unittest.TestCase):
+    def test_hidden_data_loss_context_overrides_medium_recommendation(self):
+        from effortless_codex.policy import State,choose
+        message={'id':1,'method':'turn/start','params':{'threadId':'t','model':'gpt-6.1-sol','effort':'medium','input':[{'type':'text','text':'just fix it'}], 'approvalPolicy':'never'}}
+        state=State(effort='medium',recent_user='The active task is resolving a database deadlock and data-loss bug during failover.')
+        decision={'action':'route','profile':'sol_medium','confidence':.97}
+        result,reason=choose(message,state,decision,{'auto':True},{'gpt-6.1-sol':['low','medium','high','xhigh']})
+        self.assertEqual(result['params']['effort'],'xhigh')
+        self.assertEqual(result['params']['approvalPolicy'],'never')
+        self.assertEqual(reason,'risk_floor')
+
+    def test_manual_effort_still_wins_in_risky_context(self):
+        from effortless_codex.policy import State,choose
+        message={'id':1,'method':'turn/start','params':{'threadId':'t','model':'gpt-6.1-sol','effort':'low','input':[{'type':'text','text':'Fix the authentication bypass.'}]}}
+        state=State(auto=False)
+        result,reason=choose(message,state,{'action':'route','profile':'sol_medium','confidence':.97},{'auto':True},{'gpt-6.1-sol':['low','medium','xhigh']})
+        self.assertEqual(result,message)
+
+    def test_risk_floor_is_not_applied_when_profile_is_unavailable(self):
+        from effortless_codex.policy import State,choose
+        message={'id':1,'method':'turn/start','params':{'threadId':'t','model':'gpt-6.1-sol','effort':'high','input':[{'type':'text','text':'Fix silent data loss.'}]}}
+        result,_=choose(message,State(),{'action':'route','profile':'sol_low','confidence':.97},{'auto':True},{'gpt-6.1-sol':['low','medium','high']})
+        self.assertEqual(result,message)
+
+class WarmCacheTests(unittest.TestCase):
+    def test_warm_high_keeps_effort_without_a_judge(self):
+        from effortless_codex.policy import eligible
+        state=State(effort='high',tokens=30773,cached_tokens=29440)
+        self.assertEqual(eligible(request(text='Explain this small function.'),state,{'auto':True}),(False,'warm_cached_high'))
+        self.assertEqual(choose(request(),state,decision(),{'auto':True},CATALOG)[0],request())
+
+    def test_large_uncached_context_and_warm_low_remain_eligible(self):
+        from effortless_codex.policy import eligible
+        for state,r in [(State(effort='high',tokens=30773,cached_tokens=1000),request()),(State(effort='low',tokens=30773,cached_tokens=29440),request(effort='low'))]:
+            self.assertTrue(eligible(r,state,{'auto':True})[0])
+
+    def test_known_risk_is_not_hidden_by_a_warm_cache(self):
+        from effortless_codex.policy import eligible
+        state=State(effort='high',tokens=30773,cached_tokens=29440)
+        r=request(text='Fix the data loss during failover.')
+        self.assertTrue(eligible(r,state,{'auto':True})[0])
+        self.assertEqual(choose(r,state,decision(),{'auto':True},CATALOG)[0]['params']['effort'],'xhigh')
+
+class RiskVariantTests(unittest.TestCase):
+    def test_equivalent_risk_word_forms_raise_effort(self):
+        for text in ['Diagnose database deadlocks.','Fix privilege escalations.','A retry double-charged customers; fix it.','Patch this RCE.','Investigate authentication bypasses.']:
+            r=request(text=text)
+            result,_=choose(r,State(),decision('sol_medium'),{'auto':True},CATALOG)
+            self.assertEqual(result['params']['effort'],'xhigh',text)
+
+    def test_cache_thresholds_and_zero_total_are_handled(self):
+        from effortless_codex.policy import eligible
+        for cached,total,want in [(16000,18000,False),(17000,20000,False),(15999,18000,True),(16999,20000,True),(16000,0,True)]:
+            allowed,_=eligible(request(),State(tokens=total,cached_tokens=cached),{'auto':True})
+            self.assertEqual(allowed,want,(cached,total))
+
 if __name__=='__main__':unittest.main()

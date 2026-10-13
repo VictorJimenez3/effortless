@@ -62,6 +62,10 @@ def eligible(message,state,config):
     if any(x.get('type')!='text' for x in p.get('input',[])):return False,'attached_input'
     if not text_input(p).strip():return False,'no_text'
     if is_followup(text_input(p)):return False,'continuation'
+    # Preserve the user's high baseline when the long context is already warm.
+    # These conservative thresholds are a policy choice, not a cache guarantee.
+    if pair[1]=='high' and state.cached_tokens>=16000 and state.tokens>0 and state.cached_tokens/state.tokens>=.85 and not high_consequence(p,state):
+        return False,'warm_cached_high'
     return True,'eligible'
 
 def choose(message,state,decision,config,catalog):
@@ -82,10 +86,12 @@ def choose(message,state,decision,config,catalog):
     # The worker floor is independent of a judge's confidence or category.
     if recommended_model=='gpt-6-luna':effort='low'
     elif recommended_model=='gpt-6-astra':effort='xhigh'
+    risk=high_consequence(result['params'],state)
+    if risk:effort='xhigh'
     if effort not in catalog.get(model,[]):return result,'unavailable_profile'
     set_pair(result['params'],model,effort)
     state.last_routed=(model,effort)
-    return result,'routed'
+    return result,'risk_floor' if risk else 'routed'
 
 
 def set_pair(params,model,effort):
@@ -94,3 +100,9 @@ def set_pair(params,model,effort):
     if isinstance(mode,dict) and isinstance(mode.get('settings'),dict):
         mode['settings']['model']=model
         mode['settings']['reasoning_effort']=effort
+
+
+def high_consequence(params,state):
+    # Conservative lexical guard, not a general understanding of task risk.
+    context=' '.join([text_input(params),state.recent_user,state.recent_reply]).lower()
+    return bool(re.search(r'\b(?:data[\s-]*loss(?:es)?|deadlock(?:s|ed)?|double[\s-]*charg(?:es?|ed|ing)|auth(?:entication|orization)?[\s-]*bypass(?:es)?|remote[\s-]+code[\s-]+executions?|rce|privilege[\s-]*escalations?)\b',context))

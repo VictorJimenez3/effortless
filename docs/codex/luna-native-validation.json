@@ -1,0 +1,89 @@
+[
+  {
+    "probe": "actual_routing_with_collaboration_mode",
+    "pass": true,
+    "settings": {
+      "model": "gpt-6.1-sol",
+      "effort": "low",
+      "approvalPolicy": "never",
+      "sandbox": {
+        "type": "readOnly",
+        "networkAccess": false
+      }
+    },
+    "configured_judge": "gpt-6-luna"
+  },
+  {
+    "probe": "confirmation_keeps_active_effort",
+    "pass": true,
+    "settings": {
+      "model": "gpt-6.1-sol",
+      "effort": "low",
+      "approvalPolicy": "never",
+      "sandbox": {
+        "type": "readOnly",
+        "networkAccess": false
+      }
+    },
+    "configured_judge": "gpt-6-luna"
+  },
+  {
+    "probe": "manual_picker_wins",
+    "pass": true,
+    "settings": {
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "approvalPolicy": "never",
+      "sandbox": {
+        "type": "readOnly",
+        "networkAccess": false
+      }
+    },
+    "configured_judge": "gpt-6-luna"
+  },
+  {
+    "probe": "risk_floor_enforced",
+    "pass": true,
+    "settings": {
+      "model": "gpt-6.1-sol",
+      "effort": "xhigh",
+      "approvalPolicy": "never",
+      "sandbox": {
+        "type": "readOnly",
+        "networkAccess": false
+      }
+    },
+    "routing_outcome": "risk_floor",
+    "configured_judge": "gpt-6-luna"
+  },
+  {
+    "probe": "warm_cached_high_bypasses_judge",
+    "pass": true,
+    "settings": {
+      "model": "gpt-6.1-sol",
+      "effort": "high",
+      "approvalPolicy": "never",
+      "sandbox": {
+        "type": "readOnly",
+        "networkAccess": false
+      }
+    },
+    "routing_outcome": "warm_cached_high",
+    "configured_judge": "gpt-6-luna"
+  },
+  {
+    "probe": "forced_judge_timeout_preserves_original",
+    "pass": true,
+    "settings": {
+      "model": "gpt-6.1-sol",
+      "effort": "high",
+      "approvalPolicy": "never",
+      "sandbox": {
+        "type": "readOnly",
+        "networkAccess": false
+      }
+    },
+    "routing_outcome": "judge_timeout",
+    "configured_judge": "gpt-6-luna"
+  }
+]

@@ -1,3 +1,5 @@
+> Current update: delegated cost optimization added a guarded Luna-low judge and a warm Sol-high cache bypass; see [total usage](total-usage.md). The original plan below documents the earlier quality-first implementation.
+
 # Codex Effortless implementation plan
 
 **Goal:** Compare judges fairly, install real automatic effort selection for Codex desktop, and publish the implementation in the fork.

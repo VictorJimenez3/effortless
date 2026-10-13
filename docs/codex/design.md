@@ -1,3 +1,5 @@
+> Current update: delegated cost optimization added a guarded Luna-low judge and a warm Sol-high cache bypass; see [total usage](total-usage.md). The original plan below documents the earlier quality-first implementation.
+
 # Codex desktop routing design
 
 The user has authorized a matched comparison of Luna-low and Sol-low followed by installation of the winning judge. Correctness and override handling outrank latency. A tie on correctness is broken by median single-prompt latency. Both candidates receive the same frozen stricter policy and examples three times; results and selection are published alongside the initial report.

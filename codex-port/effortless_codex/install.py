@@ -73,7 +73,7 @@ def install_files(home,python,real_cli,judge_cli,judge_model,previous_override='
     skill.parent.mkdir(parents=True,exist_ok=True)
     shutil.copytree(SOURCE/'skills/effortless-codex',skill,dirs_exist_ok=True)
     desktop='/Applications/ChatGPT.app' if Path('/Applications/ChatGPT.app').exists() else '/Applications/Codex.app'
-    value={**existing,'managed_by':'effortless-codex','version':'0.1.0','auto':True,
+    value={**existing,'managed_by':'effortless-codex','version':'0.1.1','auto':True,
         'judge_model':judge_model,'judge_cli':str(judge_cli),'judge_timeout':12,
         'minimum_confidence':0.85,'real_cli':str(real_cli),'auth_home':str(home/'.codex'),
         'data_dir':str(base),'launcher':str(launcher),'desktop_app':desktop,

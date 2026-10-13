@@ -16,6 +16,7 @@ from effortless_codex.control import atomic_json
 parser=argparse.ArgumentParser(description='Live native routing smoke test. Uses your existing ChatGPT sign-in and synthetic prompts.')
 parser.add_argument('--adapter',help='Installed launcher to verify; defaults to the source entry point')
 parser.add_argument('--output',help='Save JSON results here')
+parser.add_argument('--judge',choices=['gpt-6-luna','gpt-6.1-sol'],default='gpt-6-luna')
 OPTIONS=parser.parse_args()
 SCRATCH=tempfile.TemporaryDirectory(prefix='effortless-codex-validation-')
 ROOT=Path(SCRATCH.name)
@@ -29,7 +30,7 @@ async def main():
     auth=home/'auth.json'
     if not auth.exists():auth.symlink_to(Path.home()/'.codex/auth.json')
     config=ROOT/'settings.json'
-    settings={'auto':True,'judge_model':'gpt-6.1-sol','judge_timeout':12,
+    settings={'auto':True,'judge_model':OPTIONS.judge,'judge_timeout':12,
               'real_cli':NATIVE,
               'judge_cli':shutil.which('codex') or NATIVE,'data_dir':str(ROOT),
               'auth_home':str(Path.home()/'.codex'),'control_revision':1}
@@ -80,13 +81,34 @@ async def main():
         result=await turn(tid,'Return only the integer 4.','medium')
         assert result['effort']=='medium',result
         findings.append({'probe':'manual_picker_wins','pass':True,'settings':result})
-        settings.update(judge_timeout=0.001,control_revision=2)
+        result=await turn(await new_thread(),'Give three brief checks for silent data loss during database failover.')
+        assert result['effort']=='xhigh',result
+        status=json.loads((ROOT/'status.json').read_text())
+        assert status['outcome']=='risk_floor',status
+        findings.append({'probe':'risk_floor_enforced','pass':True,'settings':result,'routing_outcome':status['outcome']})
+        settings.update(auto=False,control_revision=2)
+        atomic_json(config,settings)
+        cached_tid=await new_thread()
+        records='\n'.join(f'Record {i:04d} has value VALUE-{i:04d}.' for i in range(2200))
+        await turn(cached_tid,'Remember these synthetic records. Reply only READY.\n'+records)
+        await turn(cached_tid,'Return the value of Record 0017, with nothing else.')
+        settings.update(auto=True,resume_revision=1,control_revision=3)
+        atomic_json(config,settings)
+        result=await turn(cached_tid,'Return the value of Record 0042, with nothing else.')
+        status=json.loads((ROOT/'status.json').read_text())
+        assert result['effort']=='high',result
+        assert status['outcome']=='warm_cached_high',status
+        findings.append({'probe':'warm_cached_high_bypasses_judge','pass':True,'settings':result,'routing_outcome':status['outcome']})
+        settings.update(judge_timeout=0.001,control_revision=4)
         atomic_json(config,settings)
         result=await turn(await new_thread(),'Compute 37 times 41 exactly.')
         assert result['effort']=='high',result
-        findings.append({'probe':'forced_judge_timeout_preserves_original','pass':True,'settings':result})
+        status=json.loads((ROOT/'status.json').read_text())
+        assert status['outcome']=='judge_timeout',status
+        findings.append({'probe':'forced_judge_timeout_preserves_original','pass':True,'settings':result,'routing_outcome':status['outcome']})
     finally:
         await c.close();log.close()
+    for finding in findings:finding['configured_judge']=OPTIONS.judge
     if OPTIONS.output:Path(OPTIONS.output).write_text(json.dumps(findings,indent=2)+'\n')
     SCRATCH.cleanup()
     print(json.dumps(findings,indent=2))

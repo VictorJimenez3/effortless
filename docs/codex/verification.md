@@ -1,3 +1,5 @@
+> Current setup: the later [total-usage evaluation](total-usage.md) changed the default to guarded Luna-low as judge with Sol as worker and a warm-cache bypass. Historical results below remain unchanged.
+
 # Codex adapter verification
 
 Verified October 13, 2026, on macOS using desktop bundled Codex 0.162.0-alpha.17.2 and native judge CLI 0.162.1. Python 3.12.13; standard library only.

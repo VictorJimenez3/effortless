@@ -1,0 +1,825 @@
+{
+  "recorded_luna_raw_accepted": 101,
+  "n": 102,
+  "effective_after_guards_accepted": 102,
+  "fresh_judge_calls": 0,
+  "warning": "Offline replay of previous decisions with the new guard and existing Sol worker mapping; not a fresh model accuracy score.",
+  "results": [
+    {
+      "case": "h01",
+      "rep": 0,
+      "raw_profile": "sol_medium",
+      "effective_profile": "sol_medium",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "r16",
+      "rep": 0,
+      "raw_profile": "sol_xhigh",
+      "effective_profile": "sol_xhigh",
+      "reason": "risk_floor",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "h02",
+      "rep": 0,
+      "raw_profile": "sol_low",
+      "effective_profile": "sol_low",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "r31",
+      "rep": 0,
+      "raw_profile": "sol_medium",
+      "effective_profile": "sol_medium",
+      "reason": "manual_or_keep",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "r27",
+      "rep": 0,
+      "raw_profile": "luna_low",
+      "effective_profile": "luna_low",
+      "reason": "manual_or_keep",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "t12",
+      "rep": 0,
+      "raw_profile": "sol_low",
+      "effective_profile": "sol_low",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "t10",
+      "rep": 0,
+      "raw_profile": "sol_medium",
+      "effective_profile": "sol_medium",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "r21",
+      "rep": 0,
+      "raw_profile": "astra_high",
+      "effective_profile": "sol_xhigh",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "r29",
+      "rep": 0,
+      "raw_profile": "astra_high",
+      "effective_profile": "astra_high",
+      "reason": "manual_or_keep",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "r32",
+      "rep": 0,
+      "raw_profile": "sol_xhigh",
+      "effective_profile": "sol_xhigh",
+      "reason": "risk_floor",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "h03",
+      "rep": 0,
+      "raw_profile": "sol_low",
+      "effective_profile": "sol_low",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "t06",
+      "rep": 0,
+      "raw_profile": "sol_low",
+      "effective_profile": "sol_low",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "r26",
+      "rep": 0,
+      "raw_profile": "astra_high",
+      "effective_profile": "astra_high",
+      "reason": "manual_or_keep",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "r24",
+      "rep": 0,
+      "raw_profile": "sol_medium",
+      "effective_profile": "sol_xhigh",
+      "reason": "risk_floor",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "h08",
+      "rep": 0,
+      "raw_profile": "luna_low",
+      "effective_profile": "sol_low",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "h04",
+      "rep": 0,
+      "raw_profile": "sol_low",
+      "effective_profile": "sol_low",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "t11",
+      "rep": 0,
+      "raw_profile": "sol_low",
+      "effective_profile": "sol_low",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "h06",
+      "rep": 0,
+      "raw_profile": "sol_low",
+      "effective_profile": "sol_low",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "r23",
+      "rep": 0,
+      "raw_profile": "sol_xhigh",
+      "effective_profile": "sol_xhigh",
+      "reason": "risk_floor",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "t08",
+      "rep": 0,
+      "raw_profile": "sol_low",
+      "effective_profile": "sol_low",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "t07",
+      "rep": 0,
+      "raw_profile": "sol_low",
+      "effective_profile": "sol_low",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "r25",
+      "rep": 0,
+      "raw_profile": "sol_xhigh",
+      "effective_profile": "sol_xhigh",
+      "reason": "manual_or_keep",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "h05",
+      "rep": 0,
+      "raw_profile": "sol_low",
+      "effective_profile": "sol_low",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "r28",
+      "rep": 0,
+      "raw_profile": "luna_low",
+      "effective_profile": "luna_low",
+      "reason": "manual_or_keep",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "t02",
+      "rep": 0,
+      "raw_profile": "sol_low",
+      "effective_profile": "sol_low",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "t14",
+      "rep": 0,
+      "raw_profile": "sol_low",
+      "effective_profile": "sol_low",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "t04",
+      "rep": 0,
+      "raw_profile": "sol_low",
+      "effective_profile": "sol_low",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "t01",
+      "rep": 0,
+      "raw_profile": "sol_low",
+      "effective_profile": "sol_low",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "t05",
+      "rep": 0,
+      "raw_profile": "sol_low",
+      "effective_profile": "sol_low",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "t09",
+      "rep": 0,
+      "raw_profile": "sol_low",
+      "effective_profile": "sol_low",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "h07",
+      "rep": 0,
+      "raw_profile": "luna_low",
+      "effective_profile": "sol_low",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "r30",
+      "rep": 0,
+      "raw_profile": "luna_low",
+      "effective_profile": "sol_low",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "t13",
+      "rep": 0,
+      "raw_profile": "sol_medium",
+      "effective_profile": "sol_medium",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "t03",
+      "rep": 0,
+      "raw_profile": "sol_low",
+      "effective_profile": "sol_low",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "r26",
+      "rep": 1,
+      "raw_profile": "astra_high",
+      "effective_profile": "astra_high",
+      "reason": "manual_or_keep",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "t10",
+      "rep": 1,
+      "raw_profile": "sol_low",
+      "effective_profile": "sol_low",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "h01",
+      "rep": 1,
+      "raw_profile": "sol_low",
+      "effective_profile": "sol_low",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "r29",
+      "rep": 1,
+      "raw_profile": "astra_high",
+      "effective_profile": "astra_high",
+      "reason": "manual_or_keep",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "r31",
+      "rep": 1,
+      "raw_profile": "sol_medium",
+      "effective_profile": "sol_medium",
+      "reason": "manual_or_keep",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "t03",
+      "rep": 1,
+      "raw_profile": "sol_low",
+      "effective_profile": "sol_low",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "h07",
+      "rep": 1,
+      "raw_profile": "luna_low",
+      "effective_profile": "sol_low",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "t11",
+      "rep": 1,
+      "raw_profile": "sol_low",
+      "effective_profile": "sol_low",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "t12",
+      "rep": 1,
+      "raw_profile": "sol_low",
+      "effective_profile": "sol_low",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "r27",
+      "rep": 1,
+      "raw_profile": "luna_low",
+      "effective_profile": "luna_low",
+      "reason": "manual_or_keep",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "r25",
+      "rep": 1,
+      "raw_profile": "sol_xhigh",
+      "effective_profile": "sol_xhigh",
+      "reason": "manual_or_keep",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "r32",
+      "rep": 1,
+      "raw_profile": "sol_xhigh",
+      "effective_profile": "sol_xhigh",
+      "reason": "risk_floor",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "h04",
+      "rep": 1,
+      "raw_profile": "sol_low",
+      "effective_profile": "sol_low",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "h03",
+      "rep": 1,
+      "raw_profile": "sol_low",
+      "effective_profile": "sol_low",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "r24",
+      "rep": 1,
+      "raw_profile": "sol_xhigh",
+      "effective_profile": "sol_xhigh",
+      "reason": "risk_floor",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "t01",
+      "rep": 1,
+      "raw_profile": "sol_low",
+      "effective_profile": "sol_low",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "t09",
+      "rep": 1,
+      "raw_profile": "sol_low",
+      "effective_profile": "sol_low",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "r23",
+      "rep": 1,
+      "raw_profile": "sol_xhigh",
+      "effective_profile": "sol_xhigh",
+      "reason": "risk_floor",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "h06",
+      "rep": 1,
+      "raw_profile": "sol_low",
+      "effective_profile": "sol_low",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "h05",
+      "rep": 1,
+      "raw_profile": "sol_low",
+      "effective_profile": "sol_low",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "t14",
+      "rep": 1,
+      "raw_profile": "sol_low",
+      "effective_profile": "sol_low",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "t02",
+      "rep": 1,
+      "raw_profile": "sol_low",
+      "effective_profile": "sol_low",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "t05",
+      "rep": 1,
+      "raw_profile": "sol_low",
+      "effective_profile": "sol_low",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "t04",
+      "rep": 1,
+      "raw_profile": "sol_low",
+      "effective_profile": "sol_low",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "t13",
+      "rep": 1,
+      "raw_profile": "sol_medium",
+      "effective_profile": "sol_medium",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "r21",
+      "rep": 1,
+      "raw_profile": "astra_high",
+      "effective_profile": "sol_xhigh",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "h08",
+      "rep": 1,
+      "raw_profile": "luna_low",
+      "effective_profile": "sol_low",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "t06",
+      "rep": 1,
+      "raw_profile": "sol_low",
+      "effective_profile": "sol_low",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "r30",
+      "rep": 1,
+      "raw_profile": "luna_low",
+      "effective_profile": "sol_low",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "h02",
+      "rep": 1,
+      "raw_profile": "sol_low",
+      "effective_profile": "sol_low",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "r28",
+      "rep": 1,
+      "raw_profile": "luna_low",
+      "effective_profile": "luna_low",
+      "reason": "manual_or_keep",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "r16",
+      "rep": 1,
+      "raw_profile": "sol_xhigh",
+      "effective_profile": "sol_xhigh",
+      "reason": "risk_floor",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "t08",
+      "rep": 1,
+      "raw_profile": "sol_low",
+      "effective_profile": "sol_low",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "t07",
+      "rep": 1,
+      "raw_profile": "sol_low",
+      "effective_profile": "sol_low",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "r30",
+      "rep": 2,
+      "raw_profile": "luna_low",
+      "effective_profile": "sol_low",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "h05",
+      "rep": 2,
+      "raw_profile": "sol_low",
+      "effective_profile": "sol_low",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "t05",
+      "rep": 2,
+      "raw_profile": "sol_low",
+      "effective_profile": "sol_low",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "h02",
+      "rep": 2,
+      "raw_profile": "sol_low",
+      "effective_profile": "sol_low",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "h03",
+      "rep": 2,
+      "raw_profile": "sol_low",
+      "effective_profile": "sol_low",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "t14",
+      "rep": 2,
+      "raw_profile": "sol_low",
+      "effective_profile": "sol_low",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "r21",
+      "rep": 2,
+      "raw_profile": "astra_high",
+      "effective_profile": "sol_xhigh",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "r29",
+      "rep": 2,
+      "raw_profile": "astra_high",
+      "effective_profile": "astra_high",
+      "reason": "manual_or_keep",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "t10",
+      "rep": 2,
+      "raw_profile": "sol_low",
+      "effective_profile": "sol_low",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "t11",
+      "rep": 2,
+      "raw_profile": "sol_low",
+      "effective_profile": "sol_low",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "r28",
+      "rep": 2,
+      "raw_profile": "luna_low",
+      "effective_profile": "luna_low",
+      "reason": "manual_or_keep",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "r31",
+      "rep": 2,
+      "raw_profile": "sol_medium",
+      "effective_profile": "sol_medium",
+      "reason": "manual_or_keep",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "r23",
+      "rep": 2,
+      "raw_profile": "sol_xhigh",
+      "effective_profile": "sol_xhigh",
+      "reason": "risk_floor",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "r32",
+      "rep": 2,
+      "raw_profile": "sol_xhigh",
+      "effective_profile": "sol_xhigh",
+      "reason": "risk_floor",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "t07",
+      "rep": 2,
+      "raw_profile": "sol_low",
+      "effective_profile": "sol_low",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "t08",
+      "rep": 2,
+      "raw_profile": "sol_low",
+      "effective_profile": "sol_low",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "r25",
+      "rep": 2,
+      "raw_profile": "sol_xhigh",
+      "effective_profile": "sol_xhigh",
+      "reason": "manual_or_keep",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "r16",
+      "rep": 2,
+      "raw_profile": "sol_xhigh",
+      "effective_profile": "sol_xhigh",
+      "reason": "risk_floor",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "t09",
+      "rep": 2,
+      "raw_profile": "sol_low",
+      "effective_profile": "sol_low",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "t13",
+      "rep": 2,
+      "raw_profile": "sol_medium",
+      "effective_profile": "sol_medium",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "t03",
+      "rep": 2,
+      "raw_profile": "sol_low",
+      "effective_profile": "sol_low",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "t02",
+      "rep": 2,
+      "raw_profile": "sol_low",
+      "effective_profile": "sol_low",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "r26",
+      "rep": 2,
+      "raw_profile": "astra_high",
+      "effective_profile": "astra_high",
+      "reason": "manual_or_keep",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "h06",
+      "rep": 2,
+      "raw_profile": "sol_low",
+      "effective_profile": "sol_low",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "t01",
+      "rep": 2,
+      "raw_profile": "sol_low",
+      "effective_profile": "sol_low",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "t04",
+      "rep": 2,
+      "raw_profile": "sol_low",
+      "effective_profile": "sol_low",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "r27",
+      "rep": 2,
+      "raw_profile": "luna_low",
+      "effective_profile": "luna_low",
+      "reason": "manual_or_keep",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "h04",
+      "rep": 2,
+      "raw_profile": "sol_low",
+      "effective_profile": "sol_low",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "t06",
+      "rep": 2,
+      "raw_profile": "sol_low",
+      "effective_profile": "sol_low",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "h01",
+      "rep": 2,
+      "raw_profile": "sol_low",
+      "effective_profile": "sol_low",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "t12",
+      "rep": 2,
+      "raw_profile": "sol_low",
+      "effective_profile": "sol_low",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "r24",
+      "rep": 2,
+      "raw_profile": "sol_xhigh",
+      "effective_profile": "sol_xhigh",
+      "reason": "risk_floor",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "h08",
+      "rep": 2,
+      "raw_profile": "luna_low",
+      "effective_profile": "sol_low",
+      "reason": "routed",
+      "accepted_after_guards": true
+    },
+    {
+      "case": "h07",
+      "rep": 2,
+      "raw_profile": "luna_low",
+      "effective_profile": "sol_low",
+      "reason": "routed",
+      "accepted_after_guards": true
+    }
+  ]
+}

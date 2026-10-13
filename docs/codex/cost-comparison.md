@@ -1,3 +1,5 @@
+> Current setup: the later [total-usage evaluation](total-usage.md) changed the default to guarded Luna-low as judge with Sol as worker and a warm-cache bypass. Historical results below remain unchanged.
+
 # Cost: automatic effort versus constant Sol-high
 
 Measured October 13, 2026. **The current adapter was about 34.8% more expensive than constant Sol-high on six synthetic tasks after including the Sol-low judge.** Both approaches passed 6/6 independent checks. This supplements the quality comparison; winning that comparison did not establish a cost advantage.
