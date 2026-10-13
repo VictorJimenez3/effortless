@@ -4,6 +4,8 @@ An experimental macOS adapter for automatic Codex reasoning effort, built in a f
 
 The original [matched evaluation](../docs/codex/matched-comparison.md) selected **Sol-low on raw judge correctness**: 102/102 accepted choices versus Luna-low's 101/102. Once helper overhead was priced, that configuration cost about 35% more than fixed Sol-high on six synthetic tasks. The current [total-usage comparison](../docs/codex/total-usage.md) uses **Luna-low as judge with deterministic guards**, Sol as worker, and a warm-cache bypass. Its new six-task cost sample was about 1.6% lower than its fixed-high baseline, while using roughly twice the raw tokens. These small results do not establish general savings or guaranteed correctness.
 
+**Daily-use recommendation:** keep native Sol-high with `effortless-codex auto off` for now. Auto remains experimental: its six-task cost sample does not demonstrate a worthwhile production benefit, and has not reproduced the original project's tool-using repository benchmark. Installing the experimental adapter enables Auto; the command above disables it without removing the installation.
+
 ## Install
 
 Requirements: macOS, Python 3.11+, the ChatGPT/Codex desktop app, the Codex CLI, and an existing ChatGPT sign-in. No new API key is required.

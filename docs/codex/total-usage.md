@@ -1,3 +1,5 @@
+> Daily-use recommendation: keep the native Sol-high setting with Auto off for now. The six single-answer cost pairs do not establish a worthwhile production saving. The original Claude project tested tool-using repository workflows, which this cost sample did not reproduce. The adapter remains an experimental option; Victor's saved Auto setting was turned off after this review.
+
 # Total usage with judge and cache accounted for
 
 October 13, 2026. The current default uses **Luna-low as judge and Sol as the automatic worker**, with a conservative risk floor and a bypass for a long, warm Sol-high chat. Automatic worker model swapping stays off.
