@@ -2,7 +2,7 @@
 
 An experimental macOS adapter for automatic Codex reasoning effort, built in a fork of [HeyCubit's original Effortless](https://github.com/HeyCubit/effortless). The Claude plugin remains intact.
 
-The [matched evaluation](../docs/codex/matched-comparison.md) selected **GPT-6.1 Sol at low reasoning as the judge**: 102/102 accepted choices versus Luna-low's 101/102, using the same 34 examples three times with identical stricter rules. These results are a small benchmark, not a correctness guarantee or proof of savings.
+The [matched evaluation](../docs/codex/matched-comparison.md) selected **GPT-6.1 Sol at low reasoning as the judge**: 102/102 accepted choices versus Luna-low's 101/102, using the same 34 examples three times with identical stricter rules. These results are a small benchmark, not a correctness guarantee or proof of savings. The later [matched cost sample](../docs/codex/cost-comparison.md) found that the current Sol judge made Auto about 35% more expensive than fixed Sol-high across six synthetic tasks; worker savings alone did not cover the judge.
 
 ## Install
 

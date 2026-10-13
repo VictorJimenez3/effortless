@@ -1,0 +1,782 @@
+{
+  "rates": {
+    "input": 50,
+    "cached": 2.5,
+    "output": 250
+  },
+  "summary": {
+    "tasks": 6,
+    "fixed_high_credits": 3.10685,
+    "auto_including_judge_credits": 4.18801,
+    "percent_change": 34.79923395078617,
+    "judge_credits": 1.88883,
+    "fixed_high_passed": 6,
+    "auto_passed": 6,
+    "auto_worker_credits": 2.29918,
+    "worker_percent_reduction": 25.996427249464904,
+    "judge_tokens": {
+      "inputTokens": 58684,
+      "cachedInputTokens": 24192,
+      "outputTokens": 415,
+      "reasoningOutputTokens": 58
+    },
+    "fixed_high_tokens": {
+      "inputTokens": 55552,
+      "cachedInputTokens": 0,
+      "outputTokens": 1317,
+      "reasoningOutputTokens": 702
+    },
+    "auto_worker_tokens": {
+      "inputTokens": 55552,
+      "cachedInputTokens": 15872,
+      "outputTokens": 1102,
+      "reasoningOutputTokens": 472
+    }
+  },
+  "cases": [
+    {
+      "case": "t01",
+      "prompt": "Compute 987654321 * 123456789 exactly. Return the integer.\nReturn a JSON object with exactly one key, answer, whose value is a string containing the requested answer. For arrays/objects, encode their JSON as that string. For code, put source in the string. Do not use tools.",
+      "judge": {
+        "model": "gpt-6.1-sol",
+        "effort": "low",
+        "decision": {
+          "id": "turn",
+          "profile": "sol_low",
+          "action": "route",
+          "confidence": 0.98,
+          "reason": "Well-defined exact integer multiplication and strict JSON formatting require Sol at minimum."
+        },
+        "routing_outcome": "routed",
+        "error": null,
+        "seconds": 5.181324334000237,
+        "usage": {
+          "total": {
+            "totalTokens": 9779,
+            "inputTokens": 9727,
+            "cachedInputTokens": 0,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 52,
+            "reasoningOutputTokens": 0
+          },
+          "last": {
+            "totalTokens": 9779,
+            "inputTokens": 9727,
+            "cachedInputTokens": 0,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 52,
+            "reasoningOutputTokens": 0
+          },
+          "modelContextWindow": 475000
+        },
+        "credits_at_current_standard_rates": 0.49935
+      },
+      "fixed_high": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "actual_model": "gpt-6.1-sol",
+        "initial_effort": "high",
+        "seconds": 3.968,
+        "status": "completed",
+        "text": "{\"answer\":\"121932631112635269\"}",
+        "usage": {
+          "total": {
+            "totalTokens": 9262,
+            "inputTokens": 9205,
+            "cachedInputTokens": 0,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 57,
+            "reasoningOutputTokens": 35
+          },
+          "last": {
+            "totalTokens": 9262,
+            "inputTokens": 9205,
+            "cachedInputTokens": 0,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 57,
+            "reasoningOutputTokens": 35
+          },
+          "modelContextWindow": 475000
+        },
+        "tools": [],
+        "errors": [],
+        "passed": true,
+        "validation": {
+          "expected": 121932631112635269,
+          "actual": 121932631112635269
+        },
+        "credits_at_current_standard_rates": 0.4745
+      },
+      "auto_worker": {
+        "model": "gpt-6.1-sol",
+        "effort": "low",
+        "actual_model": "gpt-6.1-sol",
+        "initial_effort": "low",
+        "seconds": 3.51,
+        "status": "completed",
+        "text": "{\"answer\":\"121932631112635269\"}",
+        "usage": {
+          "total": {
+            "totalTokens": 9262,
+            "inputTokens": 9205,
+            "cachedInputTokens": 0,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 57,
+            "reasoningOutputTokens": 35
+          },
+          "last": {
+            "totalTokens": 9262,
+            "inputTokens": 9205,
+            "cachedInputTokens": 0,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 57,
+            "reasoningOutputTokens": 35
+          },
+          "modelContextWindow": 475000
+        },
+        "tools": [],
+        "errors": [],
+        "passed": true,
+        "validation": {
+          "expected": 121932631112635269,
+          "actual": 121932631112635269
+        },
+        "credits_at_current_standard_rates": 0.4745
+      },
+      "auto_total_credits": 0.97385
+    },
+    {
+      "case": "t03",
+      "prompt": "A flight departs 2026-12-31 23:40 at UTC+05:30 and lasts 8 hours 55 minutes. Destination is UTC-08:00. Return destination local arrival as YYYY-MM-DD HH:MM.\nReturn a JSON object with exactly one key, answer, whose value is a string containing the requested answer. For arrays/objects, encode their JSON as that string. For code, put source in the string. Do not use tools.",
+      "judge": {
+        "model": "gpt-6.1-sol",
+        "effort": "low",
+        "decision": {
+          "id": "turn",
+          "profile": "sol_low",
+          "action": "route",
+          "confidence": 0.98,
+          "reason": "Well-defined exact date and time-zone arithmetic with a year boundary; Sol low is the minimum suitable profile."
+        },
+        "routing_outcome": "routed",
+        "error": null,
+        "seconds": 4.327398125024047,
+        "usage": {
+          "total": {
+            "totalTokens": 9820,
+            "inputTokens": 9761,
+            "cachedInputTokens": 0,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 59,
+            "reasoningOutputTokens": 0
+          },
+          "last": {
+            "totalTokens": 9820,
+            "inputTokens": 9761,
+            "cachedInputTokens": 0,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 59,
+            "reasoningOutputTokens": 0
+          },
+          "modelContextWindow": 475000
+        },
+        "credits_at_current_standard_rates": 0.5028
+      },
+      "auto_worker": {
+        "model": "gpt-6.1-sol",
+        "effort": "low",
+        "actual_model": "gpt-6.1-sol",
+        "initial_effort": "low",
+        "seconds": 4.529,
+        "status": "completed",
+        "text": "{\"answer\":\"2026-12-31 19:05\"}",
+        "usage": {
+          "total": {
+            "totalTokens": 9297,
+            "inputTokens": 9239,
+            "cachedInputTokens": 7936,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 58,
+            "reasoningOutputTokens": 32
+          },
+          "last": {
+            "totalTokens": 9297,
+            "inputTokens": 9239,
+            "cachedInputTokens": 7936,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 58,
+            "reasoningOutputTokens": 32
+          },
+          "modelContextWindow": 475000
+        },
+        "tools": [],
+        "errors": [],
+        "passed": true,
+        "validation": {
+          "expected": "2026-12-31 19:05",
+          "actual": "2026-12-31 19:05"
+        },
+        "credits_at_current_standard_rates": 0.09949
+      },
+      "fixed_high": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "actual_model": "gpt-6.1-sol",
+        "initial_effort": "high",
+        "seconds": 3.833,
+        "status": "completed",
+        "text": "{\"answer\":\"2026-12-31 19:05\"}",
+        "usage": {
+          "total": {
+            "totalTokens": 9300,
+            "inputTokens": 9239,
+            "cachedInputTokens": 0,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 61,
+            "reasoningOutputTokens": 35
+          },
+          "last": {
+            "totalTokens": 9300,
+            "inputTokens": 9239,
+            "cachedInputTokens": 0,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 61,
+            "reasoningOutputTokens": 35
+          },
+          "modelContextWindow": 475000
+        },
+        "tools": [],
+        "errors": [],
+        "passed": true,
+        "validation": {
+          "expected": "2026-12-31 19:05",
+          "actual": "2026-12-31 19:05"
+        },
+        "credits_at_current_standard_rates": 0.4772
+      },
+      "auto_total_credits": 0.60229
+    },
+    {
+      "case": "t05",
+      "prompt": "Merge overlapping half-open intervals [[9,12],[1,3],[3,5],[2,4],[12,13],[20,20],[8,10]]. Remove empty intervals. Touching alone does not overlap, but overlaps can connect intervals transitively. Return the sorted intervals as JSON.\nReturn a JSON object with exactly one key, answer, whose value is a string containing the requested answer. For arrays/objects, encode their JSON as that string. For code, put source in the string. Do not use tools.",
+      "judge": {
+        "model": "gpt-6.1-sol",
+        "effort": "low",
+        "decision": {
+          "id": "turn",
+          "profile": "sol_low",
+          "action": "route",
+          "confidence": 0.97,
+          "reason": "Well-defined interval computation requiring exact half-open boundary handling and transitive merging; Sol low is the minimum suitable profile."
+        },
+        "routing_outcome": "routed",
+        "error": null,
+        "seconds": 5.032909833011217,
+        "usage": {
+          "total": {
+            "totalTokens": 9832,
+            "inputTokens": 9771,
+            "cachedInputTokens": 8064,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 61,
+            "reasoningOutputTokens": 0
+          },
+          "last": {
+            "totalTokens": 9832,
+            "inputTokens": 9771,
+            "cachedInputTokens": 8064,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 61,
+            "reasoningOutputTokens": 0
+          },
+          "modelContextWindow": 475000
+        },
+        "credits_at_current_standard_rates": 0.12076
+      },
+      "fixed_high": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "actual_model": "gpt-6.1-sol",
+        "initial_effort": "high",
+        "seconds": 4.306,
+        "status": "completed",
+        "text": "{\"answer\":\"[[1,5],[8,12],[12,13]]\"}",
+        "usage": {
+          "total": {
+            "totalTokens": 9352,
+            "inputTokens": 9249,
+            "cachedInputTokens": 0,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 103,
+            "reasoningOutputTokens": 74
+          },
+          "last": {
+            "totalTokens": 9352,
+            "inputTokens": 9249,
+            "cachedInputTokens": 0,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 103,
+            "reasoningOutputTokens": 74
+          },
+          "modelContextWindow": 475000
+        },
+        "tools": [],
+        "errors": [],
+        "passed": true,
+        "validation": {
+          "expected": [
+            [
+              1,
+              5
+            ],
+            [
+              8,
+              12
+            ],
+            [
+              12,
+              13
+            ]
+          ],
+          "actual": [
+            [
+              1,
+              5
+            ],
+            [
+              8,
+              12
+            ],
+            [
+              12,
+              13
+            ]
+          ]
+        },
+        "credits_at_current_standard_rates": 0.4882
+      },
+      "auto_worker": {
+        "model": "gpt-6.1-sol",
+        "effort": "low",
+        "actual_model": "gpt-6.1-sol",
+        "initial_effort": "low",
+        "seconds": 4.05,
+        "status": "completed",
+        "text": "{\"answer\":\"[[1,5],[8,12],[12,13]]\"}",
+        "usage": {
+          "total": {
+            "totalTokens": 9319,
+            "inputTokens": 9249,
+            "cachedInputTokens": 0,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 70,
+            "reasoningOutputTokens": 41
+          },
+          "last": {
+            "totalTokens": 9319,
+            "inputTokens": 9249,
+            "cachedInputTokens": 0,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 70,
+            "reasoningOutputTokens": 41
+          },
+          "modelContextWindow": 475000
+        },
+        "tools": [],
+        "errors": [],
+        "passed": true,
+        "validation": {
+          "expected": [
+            [
+              1,
+              5
+            ],
+            [
+              8,
+              12
+            ],
+            [
+              12,
+              13
+            ]
+          ],
+          "actual": [
+            [
+              1,
+              5
+            ],
+            [
+              8,
+              12
+            ],
+            [
+              12,
+              13
+            ]
+          ]
+        },
+        "credits_at_current_standard_rates": 0.47995
+      },
+      "auto_total_credits": 0.60071
+    },
+    {
+      "case": "t09",
+      "prompt": "Choose non-overlapping jobs to maximize profit; touching endpoints are allowed. Jobs (start,end,profit): [(0, 3, 5), (1, 4, 7), (3, 5, 6), (4, 7, 10), (5, 8, 8), (7, 9, 4), (8, 10, 9), (2, 9, 20), (9, 12, 11), (10, 12, 5)]. Return maximum total profit as an integer.\nReturn a JSON object with exactly one key, answer, whose value is a string containing the requested answer. For arrays/objects, encode their JSON as that string. For code, put source in the string. Do not use tools.",
+      "judge": {
+        "model": "gpt-6.1-sol",
+        "effort": "low",
+        "decision": {
+          "id": "turn",
+          "profile": "sol_medium",
+          "action": "route",
+          "confidence": 0.95,
+          "reason": "Weighted interval scheduling requires exact optimization and endpoint handling; Sol medium is the lightest reliable choice."
+        },
+        "routing_outcome": "routed",
+        "error": null,
+        "seconds": 6.214050667011179,
+        "usage": {
+          "total": {
+            "totalTokens": 9887,
+            "inputTokens": 9830,
+            "cachedInputTokens": 8064,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 57,
+            "reasoningOutputTokens": 0
+          },
+          "last": {
+            "totalTokens": 9887,
+            "inputTokens": 9830,
+            "cachedInputTokens": 8064,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 57,
+            "reasoningOutputTokens": 0
+          },
+          "modelContextWindow": 475000
+        },
+        "credits_at_current_standard_rates": 0.12271
+      },
+      "auto_worker": {
+        "model": "gpt-6.1-sol",
+        "effort": "medium",
+        "actual_model": "gpt-6.1-sol",
+        "initial_effort": "medium",
+        "seconds": 6.272,
+        "status": "completed",
+        "text": "{\"answer\":\"33\"}",
+        "usage": {
+          "total": {
+            "totalTokens": 9443,
+            "inputTokens": 9308,
+            "cachedInputTokens": 0,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 135,
+            "reasoningOutputTokens": 118
+          },
+          "last": {
+            "totalTokens": 9443,
+            "inputTokens": 9308,
+            "cachedInputTokens": 0,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 135,
+            "reasoningOutputTokens": 118
+          },
+          "modelContextWindow": 475000
+        },
+        "tools": [],
+        "errors": [],
+        "passed": true,
+        "validation": {
+          "expected": 33,
+          "actual": 33
+        },
+        "credits_at_current_standard_rates": 0.49915
+      },
+      "fixed_high": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "actual_model": "gpt-6.1-sol",
+        "initial_effort": "high",
+        "seconds": 5.689,
+        "status": "completed",
+        "text": "{\"answer\":\"33\"}",
+        "usage": {
+          "total": {
+            "totalTokens": 9452,
+            "inputTokens": 9308,
+            "cachedInputTokens": 0,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 144,
+            "reasoningOutputTokens": 127
+          },
+          "last": {
+            "totalTokens": 9452,
+            "inputTokens": 9308,
+            "cachedInputTokens": 0,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 144,
+            "reasoningOutputTokens": 127
+          },
+          "modelContextWindow": 475000
+        },
+        "tools": [],
+        "errors": [],
+        "passed": true,
+        "validation": {
+          "expected": 33,
+          "actual": 33
+        },
+        "credits_at_current_standard_rates": 0.5014
+      },
+      "auto_total_credits": 0.62186
+    },
+    {
+      "case": "t12",
+      "prompt": "Write Python function compare_versions(a,b). Version strings are nonempty ASCII digits separated by dots; any other character, empty component, or empty input raises ValueError. Compare components as integers with missing trailing components equal to zero. Return -1,0,1. Arbitrarily long numeric components must work. Return only Python source in the answer string. No imports or external tools; built-in operations only.\nReturn a JSON object with exactly one key, answer, whose value is a string containing the requested answer. For arrays/objects, encode their JSON as that string. For code, put source in the string. Do not use tools.",
+      "judge": {
+        "model": "gpt-6.1-sol",
+        "effort": "low",
+        "decision": {
+          "id": "turn",
+          "profile": "sol_low",
+          "action": "route",
+          "confidence": 0.93,
+          "reason": "Well-defined coding task requiring exact validation and string-based comparison for arbitrarily long components; Sol low should handle these edge cases reliably."
+        },
+        "routing_outcome": "routed",
+        "error": null,
+        "seconds": 5.220639499952085,
+        "usage": {
+          "total": {
+            "totalTokens": 9890,
+            "inputTokens": 9792,
+            "cachedInputTokens": 0,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 98,
+            "reasoningOutputTokens": 32
+          },
+          "last": {
+            "totalTokens": 9890,
+            "inputTokens": 9792,
+            "cachedInputTokens": 0,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 98,
+            "reasoningOutputTokens": 32
+          },
+          "modelContextWindow": 475000
+        },
+        "credits_at_current_standard_rates": 0.5141
+      },
+      "fixed_high": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "actual_model": "gpt-6.1-sol",
+        "initial_effort": "high",
+        "seconds": 10.88,
+        "status": "completed",
+        "text": "{\"answer\":\"def compare_versions(a, b):\\n    def parse(version):\\n        parts = version.split('.')\\n        for i, part in enumerate(parts):\\n            if not part or any(c < '0' or c > '9' for c in part):\\n                raise ValueError('Invalid version')\\n            parts[i] = part.lstrip('0') or '0'\\n        return parts\\n\\n    left, right = parse(a), parse(b)\\n    for i in range(max(len(left), len(right))):\\n        x = left[i] if i < len(left) else '0'\\n        y = right[i] if i < len(right) else '0'\\n        if len(x) != len(y):\\n            return -1 if len(x) < len(y) else 1\\n        if x != y:\\n            return -1 if x < y else 1\\n    return 0\\n\"}",
+        "usage": {
+          "total": {
+            "totalTokens": 9620,
+            "inputTokens": 9270,
+            "cachedInputTokens": 0,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 350,
+            "reasoningOutputTokens": 132
+          },
+          "last": {
+            "totalTokens": 9620,
+            "inputTokens": 9270,
+            "cachedInputTokens": 0,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 350,
+            "reasoningOutputTokens": 132
+          },
+          "modelContextWindow": 475000
+        },
+        "tools": [],
+        "errors": [],
+        "passed": true,
+        "validation": {
+          "pass": true,
+          "checks": 18
+        },
+        "credits_at_current_standard_rates": 0.551
+      },
+      "auto_worker": {
+        "model": "gpt-6.1-sol",
+        "effort": "low",
+        "actual_model": "gpt-6.1-sol",
+        "initial_effort": "low",
+        "seconds": 8.73,
+        "status": "completed",
+        "text": "{\"answer\":\"def compare_versions(a, b):\\n    def parse(version):\\n        if not isinstance(version, str) or not version:\\n            raise ValueError(\\\"Invalid version\\\")\\n        parts = version.split('.')\\n        for part in parts:\\n            if not part or any(c < '0' or c > '9' for c in part):\\n                raise ValueError(\\\"Invalid version\\\")\\n        return [part.lstrip('0') or '0' for part in parts]\\n\\n    left, right = parse(a), parse(b)\\n    for i in range(max(len(left), len(right))):\\n        x = left[i] if i < len(left) else '0'\\n        y = right[i] if i < len(right) else '0'\\n        if len(x) != len(y):\\n            return -1 if len(x) < len(y) else 1\\n        if x != y:\\n            return -1 if x < y else 1\\n    return 0\"}",
+        "usage": {
+          "total": {
+            "totalTokens": 9563,
+            "inputTokens": 9270,
+            "cachedInputTokens": 7936,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 293,
+            "reasoningOutputTokens": 58
+          },
+          "last": {
+            "totalTokens": 9563,
+            "inputTokens": 9270,
+            "cachedInputTokens": 7936,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 293,
+            "reasoningOutputTokens": 58
+          },
+          "modelContextWindow": 475000
+        },
+        "tools": [],
+        "errors": [],
+        "passed": true,
+        "validation": {
+          "pass": true,
+          "checks": 18
+        },
+        "credits_at_current_standard_rates": 0.15979
+      },
+      "auto_total_credits": 0.67389
+    },
+    {
+      "case": "t13",
+      "prompt": "Write Python function decode(s) for count[content] nested encodings, e.g. 2[a3[b]] -> abbbabbb. Counts are nonnegative ASCII decimal integers. Other content characters are lowercase a-z only. Malformed input raises ValueError. The empty input is valid; a count must have a bracket and brackets must have counts. Return only Python source in the answer string. No imports or external tools; built-in operations only.\nReturn a JSON object with exactly one key, answer, whose value is a string containing the requested answer. For arrays/objects, encode their JSON as that string. For code, put source in the string. Do not use tools.",
+      "judge": {
+        "model": "gpt-6.1-sol",
+        "effort": "low",
+        "decision": {
+          "id": "turn",
+          "profile": "sol_medium",
+          "action": "route",
+          "confidence": 0.93,
+          "reason": "Nested parsing with exact grammar validation and malformed-input handling requires nontrivial executable code and careful edge-case reasoning."
+        },
+        "routing_outcome": "routed",
+        "error": null,
+        "seconds": 5.876254207978491,
+        "usage": {
+          "total": {
+            "totalTokens": 9891,
+            "inputTokens": 9803,
+            "cachedInputTokens": 8064,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 88,
+            "reasoningOutputTokens": 26
+          },
+          "last": {
+            "totalTokens": 9891,
+            "inputTokens": 9803,
+            "cachedInputTokens": 8064,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 88,
+            "reasoningOutputTokens": 26
+          },
+          "modelContextWindow": 475000
+        },
+        "credits_at_current_standard_rates": 0.12911
+      },
+      "auto_worker": {
+        "model": "gpt-6.1-sol",
+        "effort": "medium",
+        "actual_model": "gpt-6.1-sol",
+        "initial_effort": "medium",
+        "seconds": 15.374,
+        "status": "completed",
+        "text": "{\"answer\":\"def decode(s):\\n    if not isinstance(s, str):\\n        raise ValueError(\\\"Input must be a string\\\")\\n\\n    stack = []\\n    parts = []\\n    count = None\\n\\n    for ch in s:\\n        if '0' <= ch <= '9':\\n            count = (0 if count is None else count) * 10 + ord(ch) - ord('0')\\n        elif ch == '[':\\n            if count is None:\\n                raise ValueError(\\\"Bracket requires a count\\\")\\n            stack.append((parts, count))\\n            parts = []\\n            count = None\\n        elif ch == ']':\\n            if count is not None or not stack:\\n                raise ValueError(\\\"Malformed encoding\\\")\\n            content = ''.join(parts)\\n            parts, repetitions = stack.pop()\\n            if content and repetitions:\\n                parts.append(content * repetitions)\\n        elif 'a' <= ch <= 'z':\\n            if count is not None:\\n                raise ValueError(\\\"Count must be followed by '['\\\")\\n            parts.append(ch)\\n        else:\\n            raise ValueError(\\\"Invalid character\\\")\\n\\n    if stack or count is not None:\\n        raise ValueError(\\\"Incomplete encoding\\\")\\n    return ''.join(parts)\\n\"}",
+        "usage": {
+          "total": {
+            "totalTokens": 9770,
+            "inputTokens": 9281,
+            "cachedInputTokens": 0,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 489,
+            "reasoningOutputTokens": 188
+          },
+          "last": {
+            "totalTokens": 9770,
+            "inputTokens": 9281,
+            "cachedInputTokens": 0,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 489,
+            "reasoningOutputTokens": 188
+          },
+          "modelContextWindow": 475000
+        },
+        "tools": [],
+        "errors": [],
+        "passed": true,
+        "validation": {
+          "pass": true,
+          "checks": 19
+        },
+        "credits_at_current_standard_rates": 0.5863
+      },
+      "fixed_high": {
+        "model": "gpt-6.1-sol",
+        "effort": "high",
+        "actual_model": "gpt-6.1-sol",
+        "initial_effort": "high",
+        "seconds": 14.71,
+        "status": "completed",
+        "text": "{\"answer\":\"def decode(s):\\n    parts = []\\n    stack = []\\n    i = 0\\n\\n    while i < len(s):\\n        ch = s[i]\\n        if 'a' <= ch <= 'z':\\n            parts.append(ch)\\n            i += 1\\n        elif '0' <= ch <= '9':\\n            count = 0\\n            while i < len(s) and '0' <= s[i] <= '9':\\n                count = count * 10 + ord(s[i]) - ord('0')\\n                i += 1\\n            if i == len(s) or s[i] != '[':\\n                raise ValueError('Count must be followed by [')\\n            stack.append((parts, count))\\n            parts = []\\n            i += 1\\n        elif ch == ']':\\n            if not stack:\\n                raise ValueError('Unmatched ]')\\n            content = ''.join(parts)\\n            parts, count = stack.pop()\\n            if content and count:\\n                parts.append(content * count)\\n            i += 1\\n        else:\\n            raise ValueError('Invalid character or bracket without count')\\n\\n    if stack:\\n        raise ValueError('Unclosed bracket')\\n    return ''.join(parts)\\n\"}",
+        "usage": {
+          "total": {
+            "totalTokens": 9883,
+            "inputTokens": 9281,
+            "cachedInputTokens": 0,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 602,
+            "reasoningOutputTokens": 299
+          },
+          "last": {
+            "totalTokens": 9883,
+            "inputTokens": 9281,
+            "cachedInputTokens": 0,
+            "cacheWriteInputTokens": 0,
+            "outputTokens": 602,
+            "reasoningOutputTokens": 299
+          },
+          "modelContextWindow": 475000
+        },
+        "tools": [],
+        "errors": [],
+        "passed": true,
+        "validation": {
+          "pass": true,
+          "checks": 19
+        },
+        "credits_at_current_standard_rates": 0.61455
+      },
+      "auto_total_credits": 0.7154100000000001
+    }
+  ],
+  "protocol": {
+    "date": "2026-10-13",
+    "model": "gpt-6.1-sol",
+    "judge_effort": "low",
+    "baseline_effort": "high",
+    "case_ids": [
+      "t01",
+      "t03",
+      "t05",
+      "t09",
+      "t12",
+      "t13"
+    ],
+    "repeats": 1,
+    "tools": false,
+    "worker_backend": "desktop bundled Codex 0.162.0-alpha.17.2",
+    "judge_backend": "native CLI 0.162.1",
+    "worker_order": "alternated by case",
+    "billing": "projection from recorded token telemetry at current Standard Codex credit rates; no separate cache-write charge",
+    "limitations": [
+      "Six synthetic tasks, one pair each; not a production cost estimate or subscription allowance measurement.",
+      "Fresh independent worker threads, bounded empty recent context, and observed cache behavior; real chats can differ.",
+      "Judge decisions use the installed policy and deterministic worker mapping; no live desktop settings were changed.",
+      "Rates for paid credits do not determine included subscription consumption."
+    ]
+  }
+}
